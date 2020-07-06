@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/openFile.ico</file>
+        <file>icons/saveFile.ico</file>
+        <file>icons/regTable.ico</file>
+        <file>icons/run.ico</file>
+        <file>icons/stop.ico</file>
+        <file>icons/build.ico</file>
+    </qresource>
+</RCC>

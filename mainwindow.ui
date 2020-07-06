@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>278</width>
+    <height>279</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPlainTextEdit" name="textEdit"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>278</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSaveAs"/>
+   </widget>
+   <widget class="QMenu" name="menuProgram">
+    <property name="title">
+     <string>Program</string>
+    </property>
+    <addaction name="actionBuild"/>
+    <addaction name="actionRun"/>
+    <addaction name="separator"/>
+    <addaction name="actionToggleBreakpoint"/>
+    <addaction name="actionStopProgram"/>
+    <addaction name="separator"/>
+    <addaction name="actionShowLST"/>
+    <addaction name="actionFirmwareWatch"/>
+   </widget>
+   <widget class="QMenu" name="menuMemory">
+    <property name="title">
+     <string>Memory</string>
+    </property>
+    <addaction name="actionShowRegisters"/>
+    <addaction name="actionShowRAM"/>
+    <addaction name="separator"/>
+    <addaction name="actionShowDM"/>
+    <addaction name="actionShowPM"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuProgram"/>
+   <addaction name="menuMemory"/>
+  </widget>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="recources.qrc">
+     <normaloff>:/icons/openFile.ico</normaloff>:/icons/openFile.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="toolTip">
+    <string>Open Existing File</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionBuild">
+   <property name="icon">
+    <iconset resource="recources.qrc">
+     <normaloff>:/icons/build.ico</normaloff>:/icons/build.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Build</string>
+   </property>
+   <property name="toolTip">
+    <string>Biuld Program</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+B</string>
+   </property>
+  </action>
+  <action name="actionRun">
+   <property name="icon">
+    <iconset resource="recources.qrc">
+     <normaloff>:/icons/run.ico</normaloff>:/icons/run.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Run</string>
+   </property>
+   <property name="toolTip">
+    <string>Upload And Run Program</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="recources.qrc">
+     <normaloff>:/icons/saveFile.ico</normaloff>:/icons/saveFile.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionToggleBreakpoint">
+   <property name="text">
+    <string>Toggle Breakpoint</string>
+   </property>
+   <property name="shortcut">
+    <string>F9</string>
+   </property>
+  </action>
+  <action name="actionSaveAs">
+   <property name="text">
+    <string>Save As</string>
+   </property>
+   <property name="toolTip">
+    <string>Save As</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionShowLST">
+   <property name="text">
+    <string>Open .LST File</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="text">
+    <string>New..</string>
+   </property>
+   <property name="toolTip">
+    <string>Create New File</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionShowDM">
+   <property name="text">
+    <string>Data Memory Watch</string>
+   </property>
+   <property name="toolTip">
+    <string>Watch Data Memory Content</string>
+   </property>
+  </action>
+  <action name="actionShowPM">
+   <property name="text">
+    <string>Program Memory Watch</string>
+   </property>
+   <property name="toolTip">
+    <string>Watch Program Memory Content</string>
+   </property>
+  </action>
+  <action name="actionStopProgram">
+   <property name="icon">
+    <iconset resource="recources.qrc">
+     <normaloff>:/icons/stop.ico</normaloff>:/icons/stop.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Stop Program</string>
+   </property>
+  </action>
+  <action name="actionShowRegisters">
+   <property name="icon">
+    <iconset resource="recources.qrc">
+     <normaloff>:/icons/regTable.ico</normaloff>:/icons/regTable.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Registers Watch</string>
+   </property>
+   <property name="toolTip">
+    <string>Watch Registers Content</string>
+   </property>
+  </action>
+  <action name="actionShowRAM">
+   <property name="text">
+    <string>RAM Watch</string>
+   </property>
+   <property name="toolTip">
+    <string>Watch Internal RAM Content</string>
+   </property>
+  </action>
+  <action name="actionFirmwareWatch">
+   <property name="text">
+    <string>Firmware Watch</string>
+   </property>
+   <property name="toolTip">
+    <string>Watch Firmware HEX Content</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="recources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
